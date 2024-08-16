@@ -3,11 +3,12 @@ package client
 import (
 	"encoding/json"
 	"errors"
+	"strconv"
+
 	"github.com/mumenma/huobi_golang/internal"
 	"github.com/mumenma/huobi_golang/internal/requestbuilder"
 	"github.com/mumenma/huobi_golang/pkg/model"
 	"github.com/mumenma/huobi_golang/pkg/model/wallet"
-	"strconv"
 )
 
 // Responsible to operate wallet
@@ -45,13 +46,13 @@ func (p *WalletClient) GetDepositAddress(currency string) ([]wallet.DepositAddre
 }
 
 // Query withdraw quota for currencies
-func (p *WalletClient) GetWithdrawQuota(currency string) (*wallet.WithdrawQuota, error) {
+func (p *WalletClient) GetWithdrawQuota(currency string, proxyStr string) (*wallet.WithdrawQuota, error) {
 	request := new(model.GetRequest).Init()
 
 	request.AddParam("currency", currency)
 
 	url := p.privateUrlBuilder.Build("GET", "/v2/account/withdraw/quota", request)
-	getResp, getErr := internal.HttpGet(url)
+	getResp, getErr := internal.HttpGetWithProxy(url, proxyStr)
 	if getErr != nil {
 		return nil, getErr
 	}
