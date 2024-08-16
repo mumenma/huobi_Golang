@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/huobirdcenter/huobi_golang/internal"
-	"github.com/huobirdcenter/huobi_golang/internal/requestbuilder"
-	"github.com/huobirdcenter/huobi_golang/pkg/model"
-	"github.com/huobirdcenter/huobi_golang/pkg/model/order"
+	"github.com/mumenma/huobi_golang/internal"
+	"github.com/mumenma/huobi_golang/internal/requestbuilder"
+	"github.com/mumenma/huobi_golang/pkg/model"
+	"github.com/mumenma/huobi_golang/pkg/model/order"
 )
 
 // Responsible to operate on order

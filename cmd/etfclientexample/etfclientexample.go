@@ -1,10 +1,10 @@
 package etfclientexample
 
 import (
-	"github.com/huobirdcenter/huobi_golang/config"
-	"github.com/huobirdcenter/huobi_golang/logging/applogger"
-	"github.com/huobirdcenter/huobi_golang/pkg/client"
-	"github.com/huobirdcenter/huobi_golang/pkg/model/etf"
+	"github.com/mumenma/huobi_golang/config"
+	"github.com/mumenma/huobi_golang/logging/applogger"
+	"github.com/mumenma/huobi_golang/pkg/client"
+	"github.com/mumenma/huobi_golang/pkg/model/etf"
 )
 
 func RunAllExamples() {
@@ -14,7 +14,7 @@ func RunAllExamples() {
 	swapOut()
 }
 
-//  Get the basic information of ETF creation and redemption
+// Get the basic information of ETF creation and redemption
 func getSwapConfig() {
 	client := new(client.ETFClient).Init(config.AccessKey, config.SecretKey, config.Host)
 	currency := "hb10"
@@ -26,7 +26,7 @@ func getSwapConfig() {
 	}
 }
 
-//  Get past creation and redemption.(up to 100 records)
+// Get past creation and redemption.(up to 100 records)
 func getSwapList() {
 	client := new(client.ETFClient).Init(config.AccessKey, config.SecretKey, config.Host)
 	currency := "hb10"
@@ -40,7 +40,7 @@ func getSwapList() {
 	}
 }
 
-//  Allow clients to order creation of ETF.
+// Allow clients to order creation of ETF.
 func swapIn() {
 	client := new(client.ETFClient).Init(config.AccessKey, config.SecretKey, config.Host)
 	currency := "hb10"
@@ -56,7 +56,7 @@ func swapIn() {
 	}
 }
 
-//  Allow clients to order redemption of ETF.
+// Allow clients to order redemption of ETF.
 func swapOut() {
 	client := new(client.ETFClient).Init(config.AccessKey, config.SecretKey, config.Host)
 	currency := "hb10"

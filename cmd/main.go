@@ -1,21 +1,21 @@
 package main
 
 import (
-	"github.com/huobirdcenter/huobi_golang/cmd/accountclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/accountwebsocketclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/algoorderclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/commonclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/crossmarginclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/etfclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/isolatedmarginclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/marketclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/marketwebsocketclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/orderclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/orderwebsocketclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/stablecoinclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/subuserclientexample"
-	"github.com/huobirdcenter/huobi_golang/cmd/walletclientexample"
-	"github.com/huobirdcenter/huobi_golang/logging/perflogger"
+	"github.com/mumenma/huobi_golang/cmd/accountclientexample"
+	"github.com/mumenma/huobi_golang/cmd/accountwebsocketclientexample"
+	"github.com/mumenma/huobi_golang/cmd/algoorderclientexample"
+	"github.com/mumenma/huobi_golang/cmd/commonclientexample"
+	"github.com/mumenma/huobi_golang/cmd/crossmarginclientexample"
+	"github.com/mumenma/huobi_golang/cmd/etfclientexample"
+	"github.com/mumenma/huobi_golang/cmd/isolatedmarginclientexample"
+	"github.com/mumenma/huobi_golang/cmd/marketclientexample"
+	"github.com/mumenma/huobi_golang/cmd/marketwebsocketclientexample"
+	"github.com/mumenma/huobi_golang/cmd/orderclientexample"
+	"github.com/mumenma/huobi_golang/cmd/orderwebsocketclientexample"
+	"github.com/mumenma/huobi_golang/cmd/stablecoinclientexample"
+	"github.com/mumenma/huobi_golang/cmd/subuserclientexample"
+	"github.com/mumenma/huobi_golang/cmd/walletclientexample"
+	"github.com/mumenma/huobi_golang/logging/perflogger"
 )
 
 func main() {

@@ -3,12 +3,12 @@ package websocketclientbase
 import (
 	"fmt"
 	"github.com/gorilla/websocket"
-	"github.com/huobirdcenter/huobi_golang/internal/gzip"
-	"github.com/huobirdcenter/huobi_golang/internal/model"
-	"github.com/huobirdcenter/huobi_golang/internal/requestbuilder"
-	"github.com/huobirdcenter/huobi_golang/logging/applogger"
-	"github.com/huobirdcenter/huobi_golang/pkg/model/auth"
-	"github.com/huobirdcenter/huobi_golang/pkg/model/base"
+	"github.com/mumenma/huobi_golang/internal/gzip"
+	"github.com/mumenma/huobi_golang/internal/model"
+	"github.com/mumenma/huobi_golang/internal/requestbuilder"
+	"github.com/mumenma/huobi_golang/logging/applogger"
+	"github.com/mumenma/huobi_golang/pkg/model/auth"
+	"github.com/mumenma/huobi_golang/pkg/model/base"
 	"sync"
 	"time"
 )

@@ -1,10 +1,10 @@
 package crossmarginclientexample
 
 import (
-	"github.com/huobirdcenter/huobi_golang/config"
-	"github.com/huobirdcenter/huobi_golang/logging/applogger"
-	"github.com/huobirdcenter/huobi_golang/pkg/client"
-	"github.com/huobirdcenter/huobi_golang/pkg/model/margin"
+	"github.com/mumenma/huobi_golang/config"
+	"github.com/mumenma/huobi_golang/logging/applogger"
+	"github.com/mumenma/huobi_golang/pkg/client"
+	"github.com/mumenma/huobi_golang/pkg/model/margin"
 )
 
 func RunAllExamples() {
@@ -19,7 +19,7 @@ func RunAllExamples() {
 	genernalMarginLoanOrders()
 }
 
-//  Transfer specific asset from spot trading account to cross margin account.
+// Transfer specific asset from spot trading account to cross margin account.
 func transferIn() {
 	request := margin.CrossMarginTransferRequest{
 		Currency: "usdt",
@@ -33,7 +33,7 @@ func transferIn() {
 	}
 }
 
-//  Transfer specific asset from cross margin account to spot trading account.
+// Transfer specific asset from cross margin account to spot trading account.
 func transferOut() {
 	request := margin.CrossMarginTransferRequest{
 		Currency: "usdt",
@@ -47,7 +47,7 @@ func transferOut() {
 	}
 }
 
-//  Get the loan interest rates and loan quota applied on the user.
+// Get the loan interest rates and loan quota applied on the user.
 func getMarginLoanInfo() {
 	client := new(client.CrossMarginClient).Init(config.AccessKey, config.SecretKey, config.Host)
 	resp, err := client.GetMarginLoanInfo()
@@ -60,7 +60,7 @@ func getMarginLoanInfo() {
 	}
 }
 
-//  Place an order to apply a margin loan.
+// Place an order to apply a margin loan.
 func marginOrders() {
 	request := margin.CrossMarginOrdersRequest{Currency: "usdt",
 		Amount: "1.0"}
@@ -73,7 +73,7 @@ func marginOrders() {
 	}
 }
 
-//  Repays margin loan with you asset in your margin account.
+// Repays margin loan with you asset in your margin account.
 func marginOrdersRepay() {
 	orderId := "12345"
 	request := margin.MarginOrdersRepayRequest{Amount: "1.0"}
@@ -86,7 +86,7 @@ func marginOrdersRepay() {
 	}
 }
 
-//  Get the margin orders based on a specific searching criteria.
+// Get the margin orders based on a specific searching criteria.
 func marginLoanOrders() {
 	optionalRequest := margin.CrossMarginLoanOrdersOptionalRequest{}
 	client := new(client.CrossMarginClient).Init(config.AccessKey, config.SecretKey, config.Host)
@@ -100,7 +100,7 @@ func marginLoanOrders() {
 	}
 }
 
-//  Get the balance of the margin loan account.
+// Get the balance of the margin loan account.
 func marginAccountsBalance() {
 	client := new(client.CrossMarginClient).Init(config.AccessKey, config.SecretKey, config.Host)
 	resp, err := client.MarginAccountsBalance("")
@@ -113,9 +113,9 @@ func marginAccountsBalance() {
 	}
 }
 
-//  Repays general margin loan with you asset in your margin account.
+// Repays general margin loan with you asset in your margin account.
 func genernalMarginOrdersRepay() {
-	request := margin.CrossMarginGeneralReplayLoanOptionalRequest{AccountId: "12345", Currency:"btc", Amount:"0.01"}
+	request := margin.CrossMarginGeneralReplayLoanOptionalRequest{AccountId: "12345", Currency: "btc", Amount: "0.01"}
 	client := new(client.CrossMarginClient).Init(config.AccessKey, config.SecretKey, config.Host)
 	resp, err := client.GeneralRepay(request)
 	if err != nil {
@@ -127,7 +127,7 @@ func genernalMarginOrdersRepay() {
 	}
 }
 
-//  Get the genernal margin orders based on a specific searching criteria.
+// Get the genernal margin orders based on a specific searching criteria.
 func genernalMarginLoanOrders() {
 	optionalRequest := margin.CrossMarginGeneralReplayLoanRecordsOptionalRequest{}
 	client := new(client.CrossMarginClient).Init(config.AccessKey, config.SecretKey, config.Host)
